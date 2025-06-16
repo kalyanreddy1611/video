@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cars</title>
+    <meta name="viewport" content="width=device-width inital-scale=1.0">
+  </head>
+  <body>
+   <style>
+    button{
+      background-color: rgba(255, 0, 0,.5);
+    }
+    html, body{
+      background-color: transparent;
+      padding: 0px;
+      margin: 0px;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+    }
+    .bg{
+      margin: 0px;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      z-index: -2;
+    }
+    .cover{
+      width: 125vw;
+      height: 122.5vh;
+      background-color: rgba(0, 0, 0, .5);
+      margin: 0px;
+      padding: 0px;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      z-index: -1;
+    }
+    h1{
+      text-align: center;
+      color: rgb(255, 255, 255);
+      font-family: heading;
+      font-size: 3rem;
+      margin-top: 40vh;
+    }
+    .explore{
+      font-family: para;
+      color: white;
+      font-weight: 200;
+      font-size: 2rem;
+      display: block;
+      position: relative;
+      left: 45%;
+      padding: 10px;
+      margin: 20px;
+      background-color: rgba(244, 67, 67,.6);
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition-duration: .5s;
+
+    }
+    .explore:hover{
+      background-color: rgba(255, 0, 0,.7);
+      border: none;
+      box-shadow:  -1px -1px 5px 3px  rgba(255, 255, 255,.3);
+    }
+    @font-face {
+      font-family: heading;
+      src: url("fonts/Nosifer-Regular.ttf");
+    }
+    @font-face {
+      font-family: para;
+      src: url("fonts/CrimsonText-Regular.ttf")
+    }
+
+   </style>
+
+
+    <div> 
+      <video autoplay muted loop placeinline class="bg">
+        <source src="race car 2.mp4" type="video/mp4" height="50vh" width="50vw">
+        your browser does not support video tag
+      </video><br>
+    </div>
+    <div class="cover"></div>
+
+
+    <h1>super cars</h1>
+    <button class="explore" onclick="homepage()">Explore</button>
+     <script>
+        function homepage(){
+            window.location.href = "home.html";
+        }
+     </script>
+
+ </body>
+ 
+ 
+</html>

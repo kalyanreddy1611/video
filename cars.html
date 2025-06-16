@@ -1,99 +1,117 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Cars</title>
-    <meta name="viewport" content="width=device-width inital-scale=1.0">
-  </head>
-  <body>
-   <style>
-    button{
-      background-color: rgba(255, 0, 0,.5);
-    }
-    html, body{
-      background-color: transparent;
-      padding: 0px;
-      margin: 0px;
-      height: 100%;
-      width: 100%;
-      overflow: hidden;
-    }
-    .bg{
-      margin: 0px;
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      z-index: -2;
-    }
-    .cover{
-      width: 125vw;
-      height: 122.5vh;
-      background-color: rgba(0, 0, 0, .5);
-      margin: 0px;
-      padding: 0px;
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      z-index: -1;
-    }
-    h1{
-      text-align: center;
-      color: rgb(255, 255, 255);
-      font-family: heading;
-      font-size: 3rem;
-      margin-top: 40vh;
-    }
-    .explore{
-      font-family: para;
-      color: white;
-      font-weight: 200;
-      font-size: 2rem;
-      display: block;
-      position: relative;
-      left: 45%;
-      padding: 10px;
-      margin: 20px;
-      background-color: rgba(244, 67, 67,.6);
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      transition-duration: .5s;
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cars</title>
 
-    }
-    .explore:hover{
-      background-color: rgba(255, 0, 0,.7);
-      border: none;
-      box-shadow:  -1px -1px 5px 3px  rgba(255, 255, 255,.3);
-    }
+  <style>
+    /* Custom Fonts */
     @font-face {
       font-family: heading;
       src: url("fonts/Nosifer-Regular.ttf");
     }
+
     @font-face {
       font-family: para;
-      src: url("fonts/CrimsonText-Regular.ttf")
+      src: url("fonts/CrimsonText-Regular.ttf");
     }
 
-   </style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      font-family: para;
+    }
 
-    <div> 
-      <video autoplay muted loop placeinline class="bg">
-        <source src="race car 2.mp4" type="video/mp4" height="50vh" width="50vw">
-        your browser does not support video tag
-      </video><br>
-    </div>
-    <div class="cover"></div>
+    /* Background Video */
+    video.bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -2;
+    }
 
+    /* Semi-transparent overlay */
+    .cover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
 
-    <h1>super cars</h1>
+    /* Centered Content */
+    .content {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+
+    h1 {
+      font-family: heading;
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .explore {
+      font-size: 1.5rem;
+      font-weight: 200;
+      padding: 10px 20px;
+      background-color: rgba(244, 67, 67, 0.6);
+      border: none;
+      border-radius: 10px;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .explore:hover {
+      background-color: rgba(255, 0, 0, 0.7);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Video -->
+  <video class="bg" autoplay muted loop playsinline>
+    <source src="race car 2.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Overlay -->
+  <div class="cover"></div>
+
+  <!-- Content -->
+  <div class="content">
+    <h1>Super Cars</h1>
     <button class="explore" onclick="homepage()">Explore</button>
-     <script>
-        function homepage(){
-            window.location.href = "home.html";
-        }
-     </script>
+  </div>
 
- </body>
- 
- 
+  <script>
+    function homepage() {
+      window.location.href = "home.html";
+    }
+  </script>
+
+</body>
 </html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>form</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    </head>
+    <body>
+        <style>
+            body{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+            }
+            form{
+                display: flex;
+                background-color: rgba(128, 128, 128, .5);
+                flex-direction: column;
+                padding: 4em;
+                border: 1px solid rgb(118, 118, 118);
+            }
+            input{
+                padding: 20px;
+                border: none;
+                border-radius: 10px;
+                box-shadow: 0 0 2px rgb(0, 0, 0) inset;
+                cursor: text;
+                font-size: 20px;
+            }
+            input:focus{
+                border: none;
+            }
+            button{
+                padding: 10px;
+                border: none;
+                cursor: pointer;
+                font-size: 15px;
+                font-weight: bold;
+            }
+            button:hover{
+                box-shadow: 0 0 5px grey;
+                background-color: grey;
+                border: white solid 1px;
+            }
+
+        </style>
+      
+<!-- modify this form HTML and place wherever you want your form -->
+<form action="https://formsubmit.co/epandagow48@gmail.com" method="POST">
+  <input type="email" placeholder="Email" name="email"><br>
+  <input type="text" placeholder="Subject" name="subject" id="subject" list="sub">
+  <datalist id="sub">
+    <option value="telugu"></option>
+    <option value="hindi"></option>
+    <option value="english"></option>
+    <option value="mathematics"></option>
+  </datalist><br>
+  
+
+  <!-- your other form fields go here -->
+  <button type="submit">Send Message</button>
+</form>
+
+    </body>
+</html>
